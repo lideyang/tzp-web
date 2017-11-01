@@ -1,0 +1,34 @@
+{
+    "Demo": [
+        {
+            "url": "/iRecruite/ToEmploy/UpdateOfferStatus",
+            "desc": "获取职位列表",
+            "mock": true,
+            "res": {
+                "success": true,
+                "message": null,
+                "data": 6
+            }
+        },
+        {
+            "url": "/iRecruite/ToEmploy/UpdateOfferStatus2",
+            "desc": "获取职位列表",
+            "mock": true,
+            "res": {
+                "success": true,
+                "message": null,
+                "data": 5
+            }
+        },
+        {
+            "url": "/iRecruite/ToEmploy/UpdateOfferStatus3",
+            "desc": "获取职位列表",
+            "mock": true,
+            "res": {
+                "success": true,
+                "message": null,
+                "data": 6
+            }
+        }
+    ]
+}
