@@ -1,0 +1,50 @@
+{
+  "name": "tzp-web",
+  "version": "1.0.0",
+  "description": "投资派 网袋",
+  "scripts": {
+    "start": "run-p start_dev mock",
+    "start_dev": "run-s build_dll start_server",
+    "start_server": "cross-env  NODE_ENV=development webpack-dev-server --inline --hot --host 0.0.0.0 --port 3000 --devtool source-maps --progress --colors --content-base .",
+    "build_dll": "webpack --colors --config ./webpack.dll.config.js",
+    "build": "run-s build_dll prod",
+    "prod": "cross-env  NODE_ENV=production webpack --progress --colors",
+    "mock": "node ./mock-server/server.js 2618"
+  },
+  "license": "",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "cors": "^2.8.1",
+    "mockjs": "^1.0.1-beta2"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "autoprefixer-loader": "^3.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "latest",
+    "classnames": "^2.2.5",
+    "cross-env": "^1.0.8",
+    "css-loader": "^0.28.4",
+    "element-theme-default": "^1.3.7",
+    "element-ui": "^1.3.7",
+    "es6-promise": "^4.1.1",
+    "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^2.10.0",
+    "jquery": "^1.12.4",
+    "lodash.isempty": "^4.4.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^2.3.0",
+    "object-assign": "^4.1.1",
+    "sass": "^1.0.0-beta.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.7",
+    "webpack": "latest",
+    "webpack-dev-server": "latest",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^2.6.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
