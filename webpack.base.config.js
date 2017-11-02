@@ -30,17 +30,20 @@ module.exports = {
             'vue': 'vue/dist/vue.js'
         },
         extensions: [".less", ".css", ".js", ".vue", ".json"],
-        modules: ["node_modules", 'D:\\node_modules_ats\\']
+        modules: ["node_modules"]
     },
     resolveLoader: {
-        modules: ["node_modules", 'D:\\node_modules_ats\\']
+        modules: ["node_modules"]
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 loader: "babel-loader",
-                include: [SRC_PATH]
+                include: [SRC_PATH],
+                query: {
+                    presets: ['env']  //babel-preset-env
+                }
             },
             {
                 test: /\.css$/,
